@@ -77,13 +77,13 @@ pipeline {
             }
         } 
     } 
-    /*post {
+    post {
         success {
             emailext body: "La subida de FiberGIS_GestionWeb se ha completado con exito.\n\n" +
                            "Ultimo mensaje de commit: ${env.LAST_COMMIT_MESSAGE}\n\n" +
                            "Commit Id: ${env.LAST_COMMIT_HASH}.\n\n" +
                            "GestionWeb\n" +
-                           "https://web.fibergis.com.ar/qa/Catalogo/\n\n" +
+                           "https://web.fibergis.com.ar/qa/gestion/\n\n" +
                            "Job Name: ${env.JOB_NAME}\n" +
                            "Build: ${env.BUILD_NUMBER}\n" +
                            "Console output: ${env.BUILD_URL}",  
@@ -98,6 +98,6 @@ pipeline {
                      subject: 'FiberGIS_GestionWeb - La subida ha Fallado - ERROR',
                      to: 'Raul.Anchorena@geosystems.com.ar;Agustin.David@geosystems.com.ar'
         }
-    }*/
+    }
 }
 
