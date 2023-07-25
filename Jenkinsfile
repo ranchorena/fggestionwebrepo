@@ -44,9 +44,9 @@ pipeline {
         stage('Transfer files to remote server') {
             steps {
                 sshagent(['SSH_Server_135_geouser']) {
-                    sh 'scp C:/Code/FiberGIS_GestionWeb/Dockerfile geouser@192.168.1.135:/usr/src/app/fibergis_GestionWeb/'
-                    sh 'scp C:/Code/FiberGIS_GestionWeb/nginx.conf geouser@192.168.1.135:/usr/src/app/fibergis_GestionWeb/'
-                    sh 'scp -r C:/Code/FiberGIS_GestionWeb/GestionWeb/dist geouser@192.168.1.135:/usr/src/app/fibergis_GestionWeb/'
+                    sh 'scp C:/Code/FiberGIS_GestionWeb/Dockerfile geouser@192.168.1.135:/usr/src/app/fibergis_gestionweb/'
+                    sh 'scp C:/Code/FiberGIS_GestionWeb/nginx.conf geouser@192.168.1.135:/usr/src/app/fibergis_gestionweb/'
+                    sh 'scp -r C:/Code/FiberGIS_GestionWeb/GestionWeb/dist geouser@192.168.1.135:/usr/src/app/fibergis_gestionweb/'
                 }
             }
         }        
