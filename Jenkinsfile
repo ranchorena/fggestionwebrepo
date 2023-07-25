@@ -55,7 +55,7 @@ pipeline {
                 sshagent(['SSH_Server_135_geouser']) {
                     sh '''
                         ssh geouser@192.168.1.135 "
-                            cd /usr/src/app/fibergis_GestionWeb && 
+                            cd /usr/src/app/fibergis_gestionweb && 
                             if docker ps -a | grep fggestionweb >/dev/null 2>&1; then docker stop fggestionweb && 
                             docker rm fggestionweb; fi && 
                             docker image rm -f fggestionweb:qa || true && 
